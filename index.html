@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AyeCNSe Network</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html,body {
+  margin:0; padding:0;
+  height:100%;
+  background:black;
+  color:#e0e0e0;
+  font-family: system-ui, sans-serif;
+  overflow:hidden;
+}
+.center {
+  position:absolute;
+  top:50%; left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+}
+.ring {
+  width:160px; height:160px;
+  border:2px solid #555;
+  border-top:2px solid #fff;
+  border-radius:50%;
+  animation: spin 1.6s linear infinite;
+  margin:0 auto 20px auto;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.fade {
+  animation: fade 3s ease-in-out infinite;
+}
+@keyframes fade {
+  0% { opacity:0.2; }
+  50% { opacity:1; }
+  100% { opacity:0.2; }
+}
+.small { font-size:0.9em; color:#aaa; }
+</style>
+<script>
+setTimeout(function() {
+  if (location.hostname !== "ayecnse.net") {
+    location.href = "https://ayecnse.net";
+  }
+}, 3500);
+</script>
+</head>
+<body>
+<div class="center">
+  <div class="ring"></div>
+  <div class="fade">
+    <h1>Connecting to the AyeCNSe Network</h1>
+    <p class="small">CNS for Earth · FOSS · Embodied Intelligence</p>
+  </div>
+</div>
+</body>
+</html>
